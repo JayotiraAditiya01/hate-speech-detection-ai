@@ -1,0 +1,235 @@
+/* ============================= */
+/* RESET + BASE */
+/* ============================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ============================= */
+/* BODY */
+/* ============================= */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================= */
+/* MAIN CARD */
+/* ============================= */
+.card {
+    width: 100%;
+    max-width: 680px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 40px 35px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.35);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+/* ============================= */
+/* ANIMATION */
+/* ============================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================= */
+/* ICON */
+/* ============================= */
+.card img {
+    width: 85px;
+    margin-bottom: 12px;
+}
+
+/* ============================= */
+/* TITLE & SUBTITLE */
+/* ============================= */
+.card h1 {
+    color: #ffffff;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.card p {
+    color: #e0e0e0;
+    font-size: 15px;
+    margin-bottom: 22px;
+}
+
+/* ============================= */
+/* TEXTAREA */
+/* ============================= */
+textarea {
+    width: 100%;
+    height: 145px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.95);
+    transition: box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    box-shadow: 0 0 0 3px rgba(106, 17, 203, 0.35);
+}
+
+/* ============================= */
+/* BUTTON */
+/* ============================= */
+button {
+    margin-top: 22px;
+    width: 100%;
+    padding: 14px;
+    border-radius: 30px;
+    border: none;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+    opacity: 0.95;
+}
+
+/* DISABLED BUTTON */
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ============================= */
+/* LOADER */
+/* ============================= */
+.loader {
+    margin-top: 20px;
+    display: none;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #ffffff;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    animation: spin 1s linear infinite;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ============================= */
+/* RESULT BOX */
+/* ============================= */
+.result {
+    margin-top: 28px;
+    padding: 18px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* HATE RESULT */
+.hate {
+    background: rgba(255, 0, 0, 0.18);
+    color: #ffb3b3;
+    border: 1px solid rgba(255, 0, 0, 0.45);
+}
+
+/* SAFE RESULT */
+.safe {
+    background: rgba(0, 255, 0, 0.18);
+    color: #b9ffb9;
+    border: 1px solid rgba(0, 255, 0, 0.45);
+}
+
+/* ============================= */
+/* CONFIDENCE SECTION (STEP 3B) */
+/* ============================= */
+.confidence {
+    margin-top: 14px;
+    font-size: 14px;
+    color: #ffffff;
+    text-align: left;
+}
+
+.confidence span {
+    font-weight: 600;
+}
+
+/* CONFIDENCE BAR */
+.confidence-bar {
+    margin-top: 6px;
+    width: 100%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* CONFIDENCE BAR FILL */
+.confidence-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(135deg, #00c853, #64dd17);
+    border-radius: 8px;
+    transition: width 0.6s ease-in-out;
+}
+
+/* HATE CONFIDENCE COLOR */
+.hate-bar {
+    background: linear-gradient(135deg, #d50000, #ff5252);
+}
+
+/* ============================= */
+/* FOOTER */
+/* ============================= */
+footer {
+    margin-top: 28px;
+    font-size: 13px;
+    color: #dddddd;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* MOBILE RESPONSIVE */
+/* ============================= */
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 22px;
+    }
+
+    .card h1 {
+        font-size: 24px;
+    }
+
+    textarea {
+        height: 120px;
+    }
+}
