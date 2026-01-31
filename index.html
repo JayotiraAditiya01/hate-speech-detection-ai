@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hate Speech Detection | AI System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <div class="card">
+
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942751.png" alt="AI Icon">
+
+        <h1>Hate Speech Detection</h1>
+        <p>AI-powered system to analyze and detect offensive or hateful content</p>
+
+        <!-- FORM (AJAX) -->
+        <form>
+            <textarea placeholder="Type or paste a sentence here..." required></textarea>
+            <button type="submit">Analyze Text</button>
+        </form>
+
+        <!-- LOADER -->
+        <div id="loader" class="loader"></div>
+
+        <!-- RESULT -->
+        <div id="result-box" class="result" style="display:none;"></div>
+
+        <footer>
+            Powered by <strong>Jayotira Aditya</strong><br>
+            Machine Learning • Flask • Python
+        </footer>
+
+    </div>
+
+    <!-- JS -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+</html>
