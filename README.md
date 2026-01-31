@@ -35,7 +35,6 @@ hate-speech-detection/
 ├── requirements.txt
 └── Procfile
 
-
 ## ⚙️ How to Run Locally
 
 pip install -r requirements.txt
